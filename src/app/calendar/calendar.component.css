@@ -1,0 +1,51 @@
+
+
+.calendar {
+    display: flex;
+  }
+  
+  .dates {
+    flex: 1;
+    margin-right: 20px;
+  }
+  
+  .appointment {
+    border: 1px solid #ccc;
+    padding: 10px;
+    margin-bottom: 10px;
+  }
+  
+  .title {
+    font-weight: bold;
+  }
+  
+  .add-appointment {
+    display: flex;
+    align-items: center;
+    margin-top: 20px;
+  }
+  
+  .add-appointment input {
+    margin-right: 10px;
+  }
+  
+
+  .calendar-table {
+    width: 100%;
+    border-collapse: collapse;
+  }
+  
+  .calendar-table th, .calendar-table td {
+    padding: 10px;
+    text-align: center;
+    border: 1px solid #ccc;
+  }
+  
+  .calendar-table th {
+    background-color: #f2f2f2;
+  }
+  
+  .calendar-table td {
+    background-color: #ffffff;
+  }
+  

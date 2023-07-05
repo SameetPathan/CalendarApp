@@ -1,0 +1,48 @@
+
+<div class="calendar">
+  <div class="calendar-header">
+  
+  </div>
+  <div class="calendar-body">
+    <div class="calendar-dates">
+      <div class="calendar-date" *ngFor="let date of generateCalendarDates()">
+        <h4>{{ date | date: 'MMM d, yyyy' }}</h4>
+        <div class="appointments">
+          <div
+            class="appointment"
+            *ngFor="let appointment of getAppointmentsForDate(date)"
+            
+          >
+            <div class="appointment-title">
+              {{ appointment.title }}
+            </div>
+            <div class="appointment-actions">
+              <button
+                class="delete-button"
+                (click)="deleteAppointment(appointment)"
+              >
+                Delete
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="calendar-footer">
+    <h4>Add Appointment</h4>
+    <div class="add-appointment-form">
+      <input
+        type="text"
+        placeholder="Title"
+        [(ngModel)]="newAppointmentTitle"
+      />
+      <input
+        type="date"
+        placeholder="Date"
+        [(ngModel)]="newAppointmentDate"
+      />
+      <button (click)="addAppointment()">Add</button>
+    </div>
+  </div>
+</div>
